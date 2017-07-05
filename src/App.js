@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Test from './components/Test';
 import Footer from './components/common/Footer';
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
