@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './components/Home';
 import Test from './components/Test';
+import Footer from './components/common/Footer';
 
 import './App.css';
 
@@ -16,7 +17,15 @@ class App extends Component {
         <Router>
           <div>
             <Route path="/home" component={Home}/>
-            <Route path="/test" component={Test}/>
+            <Route path="/test" render={() => {
+              return (
+                <div>
+                  <Test />
+                  <Footer />
+                </div>
+              )
+            }}/>
+            <Route path="/footer" component={Footer}/>
           </div>
         </Router>
       </div>
